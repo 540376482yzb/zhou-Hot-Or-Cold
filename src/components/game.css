@@ -1,0 +1,15 @@
+.game{
+  display:flex;
+  width:98vw;
+  height:96vh;
+  margin: auto auto;
+  background-color: #1F253D;
+  flex-direction: column;
+  align-items:center;
+}
+
+h1{
+  color:white;
+  font-size:40px;
+  margin-top:40px;
+}

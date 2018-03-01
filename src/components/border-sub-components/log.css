@@ -1,5 +1,7 @@
 .board-log{
    display:inline-block;
-   padding:5px 5px;
+   padding:10px 10px;
+   margin-left:10px;
    border-radius:10px;
+   background-color: skyblue
 }

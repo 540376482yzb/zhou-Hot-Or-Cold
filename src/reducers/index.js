@@ -1,30 +1,23 @@
 
-const MIN = 0
-const MAX = 100
-
 const initialState ={
-	realNum: Math.floor(Math.random()*(MAX-MIN+1)),
+	realNum: null,
 	alreadyGuessed:false,
 	guess:null,
 	history:[]
 }
 
 
-function backUp(){
-	return({realNum:Math.floor(Math.random()*(MAX-MIN+1)),
-		alreadyGuessed:false,
-		guess:null,
-		history:[]
-	})
-}
-
 const gameReducer = (state=initialState, action) => {
+	let newState
 	switch(action.type){
 	case 'INIT_GAME':	
-		return backUp()
+		// console.log(action)
+		newState = Object.assign({},initialState, {realNum:action.realNum})
+		// console.log(newState)
+		return newState
 	case 'UPDATE_GAME':
-		const updateS = Object.assign({},state, action.update)
-		return updateS
+		newState = Object.assign({},state, action.update)
+		return newState
 	default:
 		return state
 

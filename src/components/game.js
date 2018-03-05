@@ -2,28 +2,18 @@ import React from 'react'
 import Board from './board'
 import Nav from './nav'
 import './game.css'
-import {initGame, updateGame} from '../actions'
+import {initGame} from '../actions'
 import {connect} from 'react-redux'
-export class Game extends React.Component{
+export function Game(props){
+	
+	return(
+		<div className='game'>
+			<Nav atClick={e => props.dispatch(initGame(Math.floor(Math.random()*(101))))}/>
+			<h1>COLD OR HOT</h1>
+			<Board/>
+		</div>
+	)
+}
 
-	render(){
-		return(
-			<div className='game'>
-				<Nav atClick={e => this.props.dispatch(initGame())}/>
-				<h1>COLD OR HOT</h1>
-				<Board 
-					state={this.props}
-					updateState={data => this.props.dispatch(updateGame(data))}/>
-			</div>
-		)
-	}
-}	
 
-const mapStateToProps = state => ({
-	realNum:state.realNum,
-	guess:state.guess,
-	history:state.history,
-	alreadyGuessed:state.alreadyGuessed
-})
-
-export default connect(mapStateToProps)(Game)
+export default connect()(Game)

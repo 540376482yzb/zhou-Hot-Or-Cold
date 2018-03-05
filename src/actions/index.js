@@ -1,7 +1,8 @@
 
-export const initGame = () => {
+export const initGame = (realNum) => {
 	return{
-		type:'INIT_GAME'
+		type:'INIT_GAME',
+		realNum
 	}
 }
 

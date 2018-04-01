@@ -4,7 +4,9 @@ Play Hot and Cold game by guessing the correct number. On each guessing, a hint 
 [Live Demo](https://reverent-visvesvaraya-3d44dd.netlify.com/)
 ### Screen Shots
 ![Imgur](https://i.imgur.com/Qf62zhE.png)
-### Technology Stacks
-  * App is built with ***React.js***
-  * Unit Test Using ***Jest***
-  * Deploy with ***Netlify***
+
+  App is built with ***React.js***
+  
+  Unit Test Using ***Jest***
+  
+  Deploy with ***Netlify***
